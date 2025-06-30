@@ -85,9 +85,9 @@ groups.forEach((group, index) => {
     }
 
     if (start === end) {
-      rollRanges.push(`${start}`);
+      rollRanges.push(${start});
     } else {
-      rollRanges.push(`${start}---${end}=${count}`);
+      rollRanges.push(${start}---${end}=${count});
     }
 
     i++;
@@ -100,7 +100,7 @@ groups.forEach((group, index) => {
     new Paragraph({
       children: [
         new TextRun({
-          text: `Group ${index + 1}`,
+          text: Group ${index + 1},
           bold: true,
           size: 28,
         }),
@@ -108,10 +108,10 @@ groups.forEach((group, index) => {
     }),
     new Paragraph({
       spacing: { after: 200 },
-      children: [new TextRun(`Roll Range: ${rollRangeText}`)],
+      children: [new TextRun(Roll Range: ${rollRangeText})],
     }),
     new Paragraph({
-      children: [new TextRun(`Absent: ${absentText}`)],
+      children: [new TextRun(Absent: ${absentText})],
     }),
   ];
 
